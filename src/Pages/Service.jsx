@@ -5,7 +5,6 @@ import "../style/service.css";
 export const Service = () => {
   const { services } = useAuth();
   
-  console.log(services,"this is services")
   return (
     <>
       <Navbar />

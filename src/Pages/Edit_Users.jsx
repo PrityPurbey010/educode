@@ -29,7 +29,7 @@ export const EditUsers = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:3000/api/admin/users/update/${id}`,
+        `https://educode-backend-six.vercel.app/api/admin/users/update/${id}`,
         {
           method: "PATCH",
           headers: {
@@ -56,7 +56,7 @@ export const EditUsers = () => {
   const fetchUserData = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/admin/users/${id}`,
+        `https://educode-backend-six.vercel.app/api/admin/users/${id}`,
         {
           method: "GET",
           headers: {

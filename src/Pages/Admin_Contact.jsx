@@ -10,7 +10,7 @@ export const AdminContacts = () => {
 
   const getContactsData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/admin/contacts", {
+      const response = await fetch("https://educode-backend-six.vercel.app/api/admin/contacts", {
         method: "GET",
         headers: {
           Authorization: AuthorizationToken,
@@ -26,7 +26,7 @@ export const AdminContacts = () => {
   const deleteContact = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/admin/contacts/delete/${id}`,
+        `https://educode-backend-six.vercel.app/api/admin/contacts/delete/${id}`,
         {
           method: "DELETE",
           headers: {

@@ -37,7 +37,8 @@ export const Contact = () => {
 
 
     try {
-      const response = await fetch(`http://localhost:3000/api/form/contact`, {
+      const response = 
+      (`https://educode-backend-six.vercel.app/api/form/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

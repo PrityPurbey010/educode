@@ -30,7 +30,7 @@ export const Login = () => {
       password: userData.password?.trim(),
     };
     try {
-      const response = await fetch(`http://localhost:3000/api/auth/login`, {
+      const response = await fetch(`https://educode-backend-six.vercel.app/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

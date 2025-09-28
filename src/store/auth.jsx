@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
 
     try {
       setIsLoading(true);
-      const respone = await fetch("http://localhost:3000/api/auth/user", {
+      const respone = await fetch("https://educode-backend-six.vercel.app/api/auth/user", {
         method: "GET",
         headers: {
           Authorization: AuthorizationToken,
@@ -61,7 +61,8 @@ export const AuthProvider = ({ children }) => {
   // to fetch the services data from the database
   const getServices = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/data/service", {
+      // const response = await fetch("https://educode-backend-six.vercel.app/api/data/service", {
+      const response = await fetch("https://educode-backend-six.vercel.app/api/data/service", {
         method: "GET",
       });
       if (response.ok) {
