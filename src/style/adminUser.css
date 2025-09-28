@@ -1,0 +1,144 @@
+.admin-users-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-color);
+}
+.userDetail{
+  padding: 10px;
+  border: 1px solid var(--table-bg-color);
+  border-radius: 6px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.userDetail h2 {
+  margin-bottom: 10px;
+}
+
+.admin-users-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.admin-users-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.admin-users-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  background: var(--bg-color);
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(81, 79, 79, 0.286);
+}
+
+.admin-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+  overflow: hidden;
+}
+
+.admin-users-th {
+  background: var(--table-bg-color);
+  color: var(--text-color);
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.admin-users-td {
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  word-break: break-word;
+}
+
+.admin-users-table tbody tr:hover {
+  background-color: rgba(202, 187, 187, 0.242);
+  transition: background 0.3s ease;
+}
+
+.admin-users-edit {
+  color: var(--helper-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.6rem;
+}
+
+.admin-users-edit:hover {
+  text-decoration: underline;
+  color: #4a3aff;
+}
+
+.admin-users-delete-btn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.admin-users-delete-btn:hover {
+  background: #e60000;
+  transform: scale(1.05);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .admin-users-title {
+    font-size: 2rem;
+  }
+
+  .admin-users-th,
+  .admin-users-td {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .admin-users-section {
+    padding: 1rem;
+  }
+
+  .admin-users-title {
+    margin-top: 18px;
+    font-size: 1.8rem;
+  }
+
+  .admin-users-table-wrapper {
+    padding: 0.5rem;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .admin-users-table {
+    font-size: 1.1rem;
+    min-width: 600px;
+  }
+
+  .admin-users-th,
+  .admin-users-td {
+    padding: 0.6rem;
+  }
+
+  .admin-users-edit,
+  .admin-users-delete-btn {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

@@ -1,0 +1,142 @@
+#error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  padding: 2rem;
+  background: var(--bg-color);
+}
+
+#error-page .content {
+  max-width: 70rem;
+  text-align: center;
+}
+
+#error-page .content h2.header {
+  font-size: 12rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#error-page .content h4 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+#error-page .content p {
+  font-size: 1.6rem;
+  color: #b51212;
+  margin-bottom: 2rem;
+}
+
+#error-page .btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+#error-page .btns a {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: var(--btn-color, #6c63ff);
+  color: #fff;
+}
+.secondary-btnReport {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: transparent;
+  border: 1px solid rgb(186, 185, 185);
+  color: var(--text-color);
+  font-size: 1.6rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 40%;
+}
+
+.secondary-btnReport:hover {
+  background-color: #444ed2;
+  color: var(--textModeColor);
+}
+
+.primary-btnHome {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: #5059e6;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 40%;
+}
+
+.primary-btnHome:hover {
+  background-color: #444ed2;
+}
+
+#error-page .btns a:hover {
+  background: #444ed2;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  #error-page .content h2.header {
+    font-size: 8rem;
+  }
+
+  #error-page .content h4 {
+    font-size: 2rem;
+  }
+
+  #error-page .content p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  #error-page {
+    padding: 4rem 1.6rem;
+  }
+
+  #error-page .content h2.header {
+    font-size: 6rem;
+  }
+
+  #error-page .content h4 {
+    font-size: 1.8rem;
+  }
+
+  #error-page .content p {
+    font-size: 1.4rem;
+  }
+
+  #error-page .btns a {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  #error-page .content h2.header {
+    font-size: 4.5rem;
+  }
+
+  #error-page .content h4 {
+    font-size: 1.6rem;
+  }
+
+  #error-page .content p {
+    font-size: 1.3rem;
+  }
+}

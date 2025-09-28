@@ -1,0 +1,172 @@
+/* ======================= */
+/* Contact Page CSS */
+/* ======================= */
+
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 2.4rem;
+  min-height: calc(100vh - 60px);
+  /* background-color: var(--bg-color); */
+}
+
+.contact-content {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.contact-content h1 {
+  font-size: 2.4rem;
+  color: var(--text-color);
+}
+
+/* Contact Layout */
+.section-contact .container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Contact Image */
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+/* Contact Form */
+.section-form {
+  flex: 1;
+  background-color: var(--bg-color);
+  border-radius: 0.8rem;
+}
+
+body.dark-mode .section-form {
+  background-color: #11273e; /* a bit lighter than dark body bg */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-form label {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+
+.section-form input,
+.section-form textarea {
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+  transition: border-color 0.2s;
+  background-color: #fff;
+  color: #000;
+}
+
+body.dark-mode .section-form input,
+body.dark-mode .section-form textarea {
+  border: 1px solid #142d3b;
+  background-color: #1a2b44;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-form input:focus,
+.section-form textarea:focus {
+  border-color: var(--btn-color);
+  outline: none;
+}
+
+.section-form button {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: var(--btn-color);
+  color: white;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.section-form button:hover {
+  background-color: #5059e6;
+}
+
+/* Google Map Section */
+.section-contact iframe {
+  margin-top: 3rem;
+  border: none;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+form.btn{
+    width: 100%;
+  padding: 1.2rem;
+  background-color: #5059e6;
+  color: white;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #444ed2;
+}
+
+/* ======================= */
+/* Responsive Styles */
+/* ======================= */
+@media (max-width: 1024px) {
+  .section-contact .container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .section-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 786px) {
+  .contact-image {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-form input,
+  .section-form textarea {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
+  .section-form button {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+}
