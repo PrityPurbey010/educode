@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 export const Navbar = () => {
   const { isLoggedIn } = useAuth();
 
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const [menuOpen, setMenuOpen] = useState(false);
 
