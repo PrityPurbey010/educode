@@ -7,7 +7,7 @@ import { AdminNav } from "../components/AdminNav";
 export const EditUsers = () => {
   const { id } = useParams();
   const { AuthorizationToken } = useAuth();
- const navigate = useNavigate();
+  const navigate = useNavigate();
   const [userData, setUserData] = useState({
     username: "",
     email: "",
@@ -15,7 +15,6 @@ export const EditUsers = () => {
   });
 
   const handleInput = (e) => {
-
     let name = e.target.name;
     let value = e.target.value;
 
@@ -40,7 +39,6 @@ export const EditUsers = () => {
         }
       );
       const data = await response.json();
-     
 
       if (response.ok) {
         toast.success("update successfully");
@@ -86,7 +84,6 @@ export const EditUsers = () => {
 
   return (
     <>
-
       <section>
         <main>
           <div className="section-registration">
@@ -137,7 +134,20 @@ export const EditUsers = () => {
                     />
                   </div>
                   <br />
-                  <button type="submit" className="btn btn-submit">
+                  <button
+                    type="submit"
+                    style={{
+                      marginTop: "1rem",
+                      padding: "1rem 1rem",
+                      backgroundColor: "#e74c3c",
+                      color: "#fff",
+                      border: "none",
+                      borderRadius: "5px",
+                      cursor: "pointer",
+                      fontSize: "1.5rem",
+                      transition: "background-color 0.3s ease",
+                    }}
+                  >
                     Update
                   </button>
                 </form>

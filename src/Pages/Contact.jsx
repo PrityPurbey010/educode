@@ -35,20 +35,21 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-
     try {
-      const response = 
-      (`https://educode-backend-six.vercel.app/api/form/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(contact),
-      });
+      const response = await fetch(
+        `https://educode-backend-six.vercel.app/api/form/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(contact),
+        }
+      );
       if (response.ok) {
         setContact(defaultContactFormData);
         const data = await response.json();
-      
+
         alert("message send successfully");
       }
     } catch (error) {
