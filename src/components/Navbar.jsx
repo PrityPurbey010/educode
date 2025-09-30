@@ -6,7 +6,10 @@ import { useState, useEffect } from "react";
 export const Navbar = () => {
   const { isLoggedIn } = useAuth();
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    return savedMode === "true";
+  });
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -16,6 +19,7 @@ export const Navbar = () => {
     } else {
       document.body.classList.remove("dark-mode");
     }
+    localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
   return (
@@ -81,7 +85,6 @@ export const Navbar = () => {
                 </>
               )}
 
-
               <li>
                 <button
                   type="button"
@@ -101,3 +104,4 @@ export const Navbar = () => {
     </>
   );
 };
+
